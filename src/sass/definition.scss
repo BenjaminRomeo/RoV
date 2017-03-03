@@ -1,0 +1,24 @@
+@mixin background-PurpleTextGrandiant()
+{
+	background-image: -webkit-linear-gradient(top, #311b92 0%, #512da8 20%, #673ab7 30%, #8c9eff 50%);
+	background-image: -ms-linear-gradient(top, #311b92 0%, #512da8 20%, #673ab7 30%, #8c9eff 50%);
+	background-image: -o-linear-gradient(top, #311b92 0%, #512da8 20%, #673ab7 30%, #8c9eff 50%);
+	background-image: linear-gradient(top, #311b92 0%, #512da8 20%, #673ab7 30%, #8c9eff 50%);
+	-webkit-background-clip: text;
+	-ms-background-clip: text;
+	-o-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-ms-text-fill-color: transparent;
+	-o-text-fill-color: transparent;
+	text-fill-color: transparent;
+}
+
+@mixin transition($type, $rangeS) 
+{
+	-webkit-transition: $type $rangeS ease-out;
+    -moz-transition: $type  $rangeS ease-out;
+    -ms-transition: $type  $rangeS ease-out;
+    -o-transition: $type $rangeS ease-out;
+	transition: $type $rangeS ease-out;
+}

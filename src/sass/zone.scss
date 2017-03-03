@@ -1,0 +1,51 @@
+body
+{	
+	.lower
+	{
+		.zone
+		{
+			.arcProgress
+			{
+				background: url(../img/coast.png) no-repeat center;
+				background-size: cover;
+				height: 600px;
+			}
+
+			.arcHighLevel
+			{
+				background: url(../img/karesh.png) no-repeat center;
+				background-size: cover;
+				height: 600px;
+			}
+
+			.exodar
+			{
+				background: url(../img/exodar.png) no-repeat center;
+				background-size: cover;
+				height: 600px;		
+			}
+
+			.arcProgress, .exodar, .arcHighLevel
+			{
+				position: relative;
+				top: -65px;
+			}
+
+			.exodar, .arcHighLevel
+			{
+				&:before
+				{
+					background: url(../img/chain.png) no-repeat center;
+				    background-size: auto 100%;
+				    display: block;
+				    height: 6em;
+				    content: "";
+				    position: relative;
+				    width: 100%;
+				    z-index: 200;
+				    top: -80px;
+				}
+			}
+		}
+	}
+}

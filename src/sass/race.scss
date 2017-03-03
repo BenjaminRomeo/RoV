@@ -1,0 +1,138 @@
+body
+{	
+	.lower
+	{
+		.race
+		{
+			margin-bottom: 15px;
+
+			video
+			{
+				    width: 100%;
+				    max-width: 1920px;
+				    max-height: 1080px;
+				    height: 100%;
+				    object-fit: cover;
+				    object-position: 25% 0%;
+				    position: absolute;
+				    left: 0px;
+				    bottom: 0px;
+				    z-index: 99;			
+			}
+
+			margin-bottom: -60px;
+			padding-bottom: 90px;
+			min-height: 55rem;
+			overflow: hidden;
+
+			.upperVideo
+			{
+				z-index: 100;
+				position: relative;
+				width: 100%;
+
+				.playable
+				{
+					width: 33%;
+					background-color: #ebdec2;
+				    color: #352011;
+				    box-shadow: 0 0 16px 6px rgba(0,0,0,.5);
+				    border: 12px solid #ebdec2;
+				    -o-border-image: url(../img/backRace.png) 12 repeat;
+				    border-image: url(../img/backRace.png) 12 repeat;
+				    border-image-outset: 5px;
+				    float: right;
+				    margin: 100px 7% 0% 0px;
+				    padding: 15px 15px 0px 15px;
+				}
+
+				.title
+				{
+					font-size: 35px;
+    				color: #09273e;
+    				text-shadow: 0 1px 2px rgba(255,255,255,.8);
+    				font-weight: 700;
+				}
+
+				.titelTopRace
+				{
+					position: relative;
+    				top: 60px;
+				}
+
+				.describInner > p
+				{
+					font-size: 20px;
+					text-align: left;
+					padding: 0px;
+					font-weight: 700;
+					color: #09273e;
+    				text-shadow: 0 1px 2px rgba(255,255,255,.8)
+				}
+
+				.racial
+				{
+					font-size: 20px;
+					text-align: left;
+					padding: 0px 0px 20px 0px;
+				}
+
+				.describInner
+				{
+					display: inline-block;
+					vertical-align: top;
+					width: calc(100% - 50px);
+					padding-left: 10px;
+					line-height: 20px;
+				}
+
+				.smallIcone
+				{
+					height: 45px;
+					width: 45px;
+					background: url('../img/smallLogo.png') no-repeat;
+					background-size: cover;
+					display: inline-block;
+					vertical-align: top;
+				}
+
+				$item: 1;
+				@while $item < 12 {
+				.sm#{$item}
+					{
+						background-position: (-45px*$item)+45px 0px;
+					}
+					$item: $item + 1;
+				}
+
+				.spaceLogo
+				{
+					height: 70px;
+    				width: 60%;
+    				margin: 0 auto;
+
+					.racialLogo
+					{
+						background: url('../img/etheral.png') no-repeat center;
+						background-size: contain;
+   						width: 100%;
+    					height: 200px;
+    					margin: 0 auto;
+    					position: relative;
+    					top: -180px;
+					}
+				}
+
+				.col
+				{
+					margin: 30px 0px 10px 0px;
+
+					.tooltipped
+					{
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+}

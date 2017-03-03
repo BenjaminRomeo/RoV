@@ -1,0 +1,137 @@
+body
+{	
+	.lower
+	{
+		.runeMaster
+		{
+			video
+			{
+				    width: 100%;
+				    max-width: 1920px;
+				    max-height: 1080px;
+				    height: 100%;
+				    object-fit: cover;
+				    position: absolute;
+				    left: 0px;
+				    bottom: 0px;
+				    z-index: 99;
+				    opacity: 0.5;
+			}
+
+			margin-bottom: -60px;
+			padding-bottom: 90px;
+
+			.upperVideo
+			{
+				z-index: 100;
+				position: relative;
+				width: 100%;
+
+				.container
+				{
+					
+					width: 100%;
+					padding: 20px 20px 0px 20px;
+					max-width: 100rem;
+					text-align: center;
+
+					h1
+					{
+						font-size: 2em;
+					}
+
+					p
+					{
+						font-size: 1.2em;
+					}
+
+					figure
+					{
+						margin: 0 auto;
+					}
+
+					@media #{$medium-and-down}
+					{
+						.textClass
+						{
+							text-align: left;
+							padding: 15px 0px 0px 30px;
+						}
+
+						p
+						{
+							text-align: left;
+						}
+
+						.classBlock
+						{
+							padding-top: 30px;
+
+							img
+							{
+								width: 100%;
+								max-width: 150px;
+							}
+						}
+					}
+
+					@media #{$small-and-down}
+					{
+						padding: 0; 
+
+						.textClass, p
+						{
+							text-align: center;
+							padding: 0; 
+
+							h1
+							{
+								text-align: center;
+							}
+						}
+					}
+				}
+			}
+
+			@for $i from 1 through 2 {
+				.imgRune:nth-child(#{$i})
+				{
+					padding: 10px 10px 10px 10px;
+					margin: 0px 10px 0px 10px;
+					border: white 2px solid;
+					height: 200px;
+				
+					.im
+					{
+					    position: absolute;
+					    top: 0;
+					    left: 0;
+					    right: 0;
+					    bottom: 0;
+					    height: 100%;
+					    width: 100%;
+					    background: url(../img/runeMaster#{$i}.png) no-repeat center;
+					    background-size: cover;
+					    padding: 10px 10px 10px 10px;
+					}
+				}
+			}
+
+			.transRow
+			{
+				position: relative;
+				left: -10px;
+
+				@media #{$small-and-down} 
+				{
+					left: 0px;
+
+					.imgRune
+					{
+						margin: 5px 0px 5px 0px;
+					}
+				}
+			}
+		}
+	}
+}
